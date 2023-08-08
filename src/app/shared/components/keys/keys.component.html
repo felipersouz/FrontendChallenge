@@ -1,0 +1,16 @@
+<div class="d-flex flex-column" *ngFor="let pair of teamPairs">
+  <div class="mb-5">
+    <div class="container-key team-info1 mb-3">
+      <p class="medium-text-bold white-1">{{ pair[0]?.name }}</p>
+      <p class="small-text white-7" *ngFor="let player of pair[0]?.players">
+        {{ player }}
+      </p>
+    </div>
+    <div class="container-key team-info2">
+      <p class="medium-text-bold white-1">{{ pair[1]?.name }}</p>
+      <p class="small-text white-7" *ngFor="let player of pair[1]?.players">
+        {{ player }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Para ocupar toda a altura da tela */
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.image-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Defina a opacidade desejada aqui */
+  z-index: -1;
+}
+.main {
+  padding: 50px;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}

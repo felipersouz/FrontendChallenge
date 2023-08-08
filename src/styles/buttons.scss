@@ -1,0 +1,14 @@
+.bt-primary {
+  min-width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #2ab9e7;
+  transition: background 1s, transform 1s;
+}
+
+.bt-primary:hover {
+  background: #055c79;
+  transform: scale(1);
+}

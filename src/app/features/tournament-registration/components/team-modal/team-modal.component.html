@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h4 class="modal-title white-7">Register Team</h4>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+    (click)="activeModal.dismiss()"
+  >
+    >
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+      <label for="name">Team name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-group">
+      <label>Players</label>
+      <div formArrayName="players">
+        <div *ngFor="let playerCtrl of playerControls.controls; let i = index">
+          <input type="text" class="form-control mb-2" [formControlName]="i" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer d-flex justify-content-end">
+  <button type="submit" class="bt-primary w-100" (click)="onSubmit()">
+    Add
+  </button>
+</div>
